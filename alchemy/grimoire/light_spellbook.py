@@ -1,4 +1,10 @@
-def light_spell_allowed_ingredients():
+from alchemy.grimoire.light_validator import validate_ingredients
 
-def ligh_spell_record(spell_name: str, ingredients: str):
-    
+
+def light_spell_allowed_ingredients():
+    return ["earth", "air", "fire", "water"]
+
+
+def light_spell_record(spell_name: str, ingredients: str):
+    status = validate_ingredients(ingredients)
+    return (f"Spell recorded: {spell_name} ({status})")
