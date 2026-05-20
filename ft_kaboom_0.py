@@ -1,6 +1,6 @@
-import alchemy.grimoire
+from alchemy.grimoire import light_spell_record
 
 print("=== Kaboom 0 ===")
 print("Using grimoire module directly")
 print(f"Testing record light spell:"
-      f"{alchemy.grimoire.light_spell_allowed_ingredients()}")
+      f"{light_spell_record("Fantasy", "Earth, wind and fire")}")
